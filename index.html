@@ -49,21 +49,56 @@
             max-width: 100%;
             border-radius: 50%;
         }
-        .publication-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .publication-list li {
-            margin-bottom: 10px;
-        }
     </style>
 </head>
 <body>
-    <!-- Header and navigation remain the same -->
-
+    <header>
+        <h1>Quantum Optics and Quantum Information Theory Group</h1>
+    </header>
+    
+    <nav>
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('research')">Research</a>
+        <a onclick="showSection('members')">Members</a>
+        <a onclick="showSection('publications')">Publications</a>
+        <a onclick="showSection('talks')">Talks</a>
+    </nav>
+    
     <main>
-        <!-- Home, Research, and Talks sections remain the same -->
-
+        <section id="home">
+            <h2>Welcome</h2>
+            <img src="/api/placeholder/800/400" alt="Group photo" />
+            <p>The Quantum Optics and Quantum Information theory group, led by Professor Timothy Ralph, is part of the Quantum Science program of The University of Queensland and the ARC Centre of Excellence for Quantum Computation & Communication Technology.</p>
+            <p>The group is funded by The University of Queensland, the Australian Defence Innovation Hub and the Australian Research Council.</p>
+            
+            <h3>Interests</h3>
+            <p>We investigate the use of quantum optical systems for quantum information applications and fundamentals.</p>
+            
+            <h3>Join Us</h3>
+            <p>We are always looking for new PhD students. Please contact us to express your interest or visit the School of Mathematics and Physics webpage for more information on how to apply.</p>
+            <p>Prospective postdoctoral applicants are welcome to directly contact us for job openings.</p>
+            
+            <h3>Location</h3>
+            <p>The group is located at the St. Lucia campus of The University of Queensland, Brisbane, Australia.</p>
+        </section>
+        
+        <section id="research">
+            <h2>Research</h2>
+            
+            <h3>Optical Quantum Computing</h3>
+            <p>The Optical Quantum Computing Program lies within the ARC Centre of Excellence for Quantum Computation & Communication Technology and is funded by the Australian Research Council, The University of Queensland. It investigates the use of quantum optical systems for quantum information processing.</p>
+            <p>Two major paradigms pursued are the single photon approach of Knill, Laflamme and Milburn, Nature 409, 46 (2001) and the coherent light approach of Ralph et al, Phys.Rev.A 68, 042319 (2003). Both of these schemes employ linear optical processing but enhanced with non-linear interactions. An exciting new direction is the investigation of sampling algorithms such as Boson Sampling.</p>
+            <p>Our main collaborators are the experimental programs at UQ, Griffith University, the Australian National University and UNSW Canberra. Our main international collaborators include the University of Bristol, UK, National University of Singapore, and NII Japan.</p>
+            
+            <h3>Quantum Communication</h3>
+            <p>The Quantum Communication Program lies within the ARC Centre of Excellence for Quantum Computation & Communication Technology and is funded by the Australian Research Council, The University of Queensland, a Capability and Technology Demonstrator (CTD) Grant, and the Defence Science and Technology Organisation. Quantum information research has traditionally concentrated on discrete variables such as spin with two-dimensional Hilbert spaces. Recently there has been increasing interest in quantum information protocols using continuous variables of infinite dimensional systems. This program investigates discrete variable quantum communication protocols as well as continuous variable generalisations of quantum teleportation, key distribution, and distillation of entanglement.</p>
+            <p>We collaborate closely with Centre of Excellence groups at the Australian National University and Griffith University as well as the Australian company QuintessenceLabs, and international groups such as the Max Planck Institute for the Science of Light, the Technical University of Denmark, and the University of Tokyo, Japan.</p>
+            
+            <h3>Relativistic Quantum Information</h3>
+            <p>Until recently, most quantum information research has been formulated in a non-relativistic setting. The desire for a better understanding of the interaction between quantum mechanics and relativity, plus the ever-increasing sensitivity of experiments has stimulated research into relativistic quantum information. Currently, we are interested in quantum information protocols and entanglement in curved space-time. We hold an international workshop on Relativistic Quantum Information every year.</p>
+            <p>We collaborate with other groups at UQ and the University of Sydney as well as international groups at the University of Nottingham, UK, the University of Vienna, Austria, and the University of Waterloo, Canada.</p>
+        </section>
+        
         <section id="members">
             <h2>Members</h2>
             <h3>Current Members</h3>
@@ -73,81 +108,65 @@
                     <p>Prof. Timothy Ralph</p>
                     <p>Group Leader</p>
                 </div>
-                <div class="member-card">
-                    <img src="/api/placeholder/200/200" alt="Dr. Kayn Forbes" />
-                    <p>Dr. Kayn Forbes</p>
-                    <p>Postdoctoral Research Fellow</p>
-                </div>
-                <div class="member-card">
-                    <img src="/api/placeholder/200/200" alt="Rajendra Shrestha" />
-                    <p>Rajendra Shrestha</p>
-                    <p>PhD student</p>
-                </div>
-                <div class="member-card">
-                    <img src="/api/placeholder/200/200" alt="Nicholas Funai" />
-                    <p>Nicholas Funai</p>
-                    <p>PhD student</p>
-                </div>
-                <div class="member-card">
-                    <img src="/api/placeholder/200/200" alt="Samindu Seneviratne" />
-                    <p>Samindu Seneviratne</p>
-                    <p>Honours student</p>
-                </div>
-                <!-- Add more current members as needed -->
+                <!-- Add more current members here -->
             </div>
             
             <h3>Former Members</h3>
             <div class="member-grid">
-                <div class="member-card">
-                    <img src="/api/placeholder/200/200" alt="Dr. Austin Lund" />
-                    <p>Dr. Austin Lund</p>
-                    <p>Senior Lecturer</p>
-                </div>
-                <div class="member-card">
-                    <img src="/api/placeholder/200/200" alt="Dr. Spyros Tserkis" />
-                    <p>Dr. Spyros Tserkis</p>
-                    <p>Postdoctoral Research Fellow</p>
-                </div>
-                <div class="member-card">
-                    <img src="/api/placeholder/200/200" alt="Shan Wang" />
-                    <p>Shan Wang</p>
-                    <p>PhD student</p>
-                </div>
-                <!-- Add more former members as needed -->
+                <!-- Add former members here -->
             </div>
         </section>
         
         <section id="publications">
             <h2>Publications</h2>
-            <h3>Journal Papers</h3>
-            <ul class="publication-list">
-                <li>K. Forbes, J. Bradshaw, and T.C. Ralph, "Quantum Information Protocols in Accelerating Frames", Physical Review Research 4, 033071 (2022).</li>
-                <li>K. Forbes and T.C. Ralph, "Quantum Information Processing in Curved Spacetime", Physical Review A 105, 032435 (2022).</li>
-                <li>S. Wang, K. Forbes, and T.C. Ralph, "A Generalized Discrete Teleportation Protocol", Physical Review A 105, 052415 (2022).</li>
-                <!-- Add more journal papers as needed -->
+            <ul>
+                <li>Journal Papers</li>
+                <li>Preprints</li>
+                <li>Conference Papers</li>
+                <li>Books and Book Chapters</li>
             </ul>
-
-            <h3>Preprints</h3>
-            <ul class="publication-list">
-                <li>K. Forbes and T.C. Ralph, "Quantum Communication in Curved Spacetime", arXiv:2203.xxxxx (2022).</li>
-                <!-- Add more preprints as needed -->
-            </ul>
-
-            <h3>Conference Papers</h3>
-            <ul class="publication-list">
-                <li>S. Wang, K. Forbes, and T.C. Ralph, "Generalized Discrete Variable Quantum Teleportation", Proceedings of the International Conference on Quantum Communication, Measurement and Computing (QCMC), (2022).</li>
-                <!-- Add more conference papers as needed -->
-            </ul>
-
-            <h3>Books and Book Chapters</h3>
-            <ul class="publication-list">
-                <li>T.C. Ralph, "Continuous Variable Quantum Information", in Quantum Information with Continuous Variables of Atoms and Light, Imperial College Press (2007).</li>
-                <!-- Add more books and book chapters as needed -->
+        </section>
+        
+        <section id="talks">
+            <h2>Talks</h2>
+            <ul>
+                <li>
+                    <h3>13th Relativistic Quantum Information Workshop, Brisbane, Australia, 2020.</h3>
+                    <a href="#">Presentation Slides</a>
+                </li>
+                <li>
+                    <h3>AIP Congress, Perth, Australia, 2018.</h3>
+                    <a href="#">Presentation Slides</a>
+                </li>
+                <li>
+                    <h3>11th Relativistic Quantum Information Workshop, Brisbane, Australia, 2017.</h3>
+                    <a href="#">Presentation Slides</a>
+                </li>
+                <li>
+                    <h3>10th Relativistic Quantum Information Workshop, Brisbane, Australia, 2016.</h3>
+                    <a href="#">Presentation Slides</a>
+                </li>
             </ul>
         </section>
     </main>
+    
+    <footer>
+        <p>&copy; 2024 Quantum Optics and Quantum Information Theory Group. All rights reserved.</p>
+        <img src="/api/placeholder/100/50" alt="ARC Centre of Excellence for Quantum Computation & Communication Technology logo" />
+        <img src="/api/placeholder/100/50" alt="The University of Queensland logo" />
+    </footer>
 
-    <!-- Footer and script remain the same -->
-
+    <script>
+    function showSection(sectionId) {
+        // Hide all sections
+        const sections = document.getElementsByTagName('section');
+        for (let i = 0; i < sections.length; i++) {
+            sections[i].style.display = 'none';
+        }
+        
+        // Show the selected section
+        document.getElementById(sectionId).style.display = 'block';
+    }
+    </script>
 </body>
 </html>
